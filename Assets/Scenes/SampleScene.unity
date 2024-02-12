@@ -660,7 +660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a99bee8ff0ca6484e8b54c0b3a4dc7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedType: 3
+  selectedType: 2
   units: []
   unitVertical: 4
   unitHorizontal: 6
@@ -669,6 +669,12 @@ MonoBehaviour:
   verticalInput: {fileID: 1418892182}
   horizontalInput: {fileID: 1795185313}
   rangeBetweenInput: {fileID: 2114260209}
+  amount: 20
+  ringOffset: 1
+  radius: 1
+  radiusGrowth: 0
+  rotations: 1
+  rings: 2
 --- !u!4 &306727701
 Transform:
   m_ObjectHideFlags: 0
@@ -1915,7 +1921,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 56.200012, y: -215.1}
+  m_AnchoredPosition: {x: 56.19995, y: -215.1}
   m_SizeDelta: {x: 339.2469, y: 63.6088}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &1512740322
@@ -2533,7 +2539,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 56.2, y: -124.9}
+  m_AnchoredPosition: {x: 56.19995, y: -124.9}
   m_SizeDelta: {x: 339.2469, y: 63.6088}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &1805336783
@@ -2763,7 +2769,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 56.200012, y: -304.6}
+  m_AnchoredPosition: {x: 56.19995, y: -304.6}
   m_SizeDelta: {x: 339.2469, y: 63.6088}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2114260209

@@ -20,6 +20,14 @@ public class CrowdControl : MonoBehaviour
     [SerializeField] private TMP_InputField verticalInput;
     [SerializeField] private TMP_InputField horizontalInput;
     [SerializeField] private TMP_InputField rangeBetweenInput;
+    [Header("Circle Settings")]
+    [SerializeField] private int amount;
+    [SerializeField] private int ringOffset;
+    [SerializeField] private int radius;
+    [SerializeField] private float radiusGrowth;
+    [SerializeField] private int rotations;
+    [SerializeField] private int rings;
+
 
 
 
@@ -27,6 +35,27 @@ public class CrowdControl : MonoBehaviour
 
         switch (selectedType)
         {
+            case ArmyType.CIRCLE:
+
+                var amountPerRing = amount/rings;
+                var _ringOffset = 0f;
+                for (int i = 0; i < rings; i++)
+                {
+                    for (int j = 0; j < amountPerRing; j++)
+                    {
+                        var angle = j * Mathf.PI * (2 * rotations) / amountPerRing;
+                        var _radius = radius + _ringOffset + j * radiusGrowth;
+                        var x = Mathf.Cos(angle) * _radius;
+                        var z = Mathf.Sin(angle) * _radius;
+
+                        var position = new Vector3(x, 0, z);
+                        yield return position;
+                    }
+                    _ringOffset += ringOffset;
+                }
+                
+
+                break;
             case ArmyType.RECTANGLE:
                 var centerPosRectangle = new Vector3(unitVertical * 0.5f, 0, unitHorizontal * 0.5f);
                 Debug.Log("RECTANGLE");
